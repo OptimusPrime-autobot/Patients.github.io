@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Patient Medical System</title>
+	<style type="text/css">
+		 
+		  body {
+            background-color: #34495E;
+            font-family: Arial, sans-serif;
+        } 
+
+         .container {
+            background-color: #08244d;
+            color: white;
+            padding: 20px 0;
+            width: 101.5%;
+            height: 75px;
+            margin-left:-1%;
+        }
+
+         
+           a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+          ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+
+          img {
+            width: 150px;
+            margin-left: 20px;
+            margin-top: -45px;
+
+        }
+
+          h1 {
+            font-size: 40px;
+            margin-left: 130px;
+            margin-top: -90px;
+            font-weight: bold;
+        }
+
+          nav {
+            margin-left: 915px;
+            margin-top: -40px;
+        }
+
+
+          .bar {
+            margin-top: -60px;
+            display: flex;
+            justify-content: center;
+            margin-left: 190px;
+        }
+
+           #searchbar {
+            padding: 5px;
+            width: 250px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+         
+           .outside{
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-left: -1%;
+            
+            
+           
+        }
+
+           .inside{
+            display: flex;
+            
+            transition: transform 0.8s ease-in-out;
+            
+        }
+
+
+           .slider{
+            min-width: 100%;
+            max-width: 100%;
+            flex-shrink: 0;
+             
+        }
+
+
+          .slider img {
+            width: 100%;
+            height: 450px;
+               
+            
+        }  
+
+
+          button {
+            position: absolute;
+            top: 55%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+            transition: background-color 0.3s ease; 
+
+        }  
+
+
+        .arrow-left {
+            left: 45px;
+        }
+
+        .arrow-right {
+            right: 30px;
+        }  
+
+          button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }   
+
+         .indicators {
+            position: absolute;
+            top: 680px;
+            left: 48%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+
+
+        .indicators span {
+            background-color: #fff;
+            border: 2px solid #fff;
+            border-radius: 4px; 
+            width: 20px;
+            height: 6px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+            margin-top: -120px;
+        }
+
+         span.active {
+            background-color: #f39c12;
+        }
+
+        span:hover {
+            background-color: #f39c12;
+        }  
+
+
+           .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 15px;
+            margin-top: 70px;
+
+        }
+
+         .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: -0.8px;
+        }
+
+         .gallery img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+
+
+         #embedone {
+            margin-top: 44px;
+            width: 100%;
+            height: 400px;
+        }
+
+        #embedtwo  {
+            margin-top: -17px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .youtube, .maps {
+            background-color: #08244d;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+        }
+
+        .maps {
+            margin-top: 450px;
+        }
+
+
+
+        .contact-us {
+            background-color: #1e3d58;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #p1 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+
+
+       .fa{
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            margin: 0 10px;
+            border-radius: 100%;
+            padding: 10px;
+        }
+
+
+        .fa:hover {
+          background-color: #34495E; 
+          border-radius: 50%; 
+          padding: 10px;
+      }
+
+
+
+
+          .fa-facebook {
+            background: #08244d;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #08244d;
+            color: white;
+        }
+
+        .fa-google {
+            background: #08244d;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #08244d;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #08244d;
+            color: white;
+        }
+
+    
+      footer {
+            background-color: #1e3d58;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+  
+
+
+	</style>
+</head>
+<body>
+
+    <div class="container">
+    	<img src="offlogo.png">
+    	<h1> Patient Medical System</h1>
+
+
+
+      <div class="bar">
+        <input type="text" id="searchbar" placeholder="Search..."> 
+    </div>
+
+
+
+    	<nav>
+    		<ul>
+
+    			<li><a href="#Home">Appointment</a></li>
+                <li><a href="#Home">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="logiin.html">Login</a></li>
+
+
+    		</ul>
+    	</nav>
+
+    </div>
+
+    
+
+
+    <div class="outside">
+    	<div class="inside">
+
+    		<div class="slider active">
+    			<img src="care99.jpg">
+    		</div>
+
+    		<div class="slider">
+    			<img src="care33.jpg">
+    		</div>
+
+    		<div class="slider">
+    			<img src="care11.jpg">
+    		</div>
+
+    	</div>
+    </div>
+
+
+    <div> 
+    	
+    		<button  class="arrow-left"  id="prev" >&#10094;</button>
+            <button class="arrow-right"  id="next" >&#10095;</button>
+         
+    	
+
+          <div class="indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+
+    </div>
+
+    <div class="gallery">
+    	<img src="care5.JPG">
+        <img src="care66.jpg">
+        <img src="care7.jpg">
+        <img src="care8.jpg">
+    </div>
+
+    <div class="youtube">
+
+    	  <h2 class="text">Watch Our Informational Video</h2>
+
+    	  <div>
+    	  	<iframe src="https://www.youtube.com/embed/Cg_GW7yhq20?si=oljkl_4lfHbXr4Q2"  id="embedone" allowfullscreen ></iframe>
+    	  </div> 
+
+    </div>
+
+
+    <div class="location">
+
+    	<h2 class="maps">Our Location</h2>
+
+    	<div>
+    		<iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Orthopedic Rehabilitation - St. Luke's Medical Center&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" id="embedtwo"></iframe>
+
+    	</div>
+
+    </div>
+
+    <div class="contact-us">
+
+        <h2 id="h2">Contact Us</h2>
+        <p id="p1">If you have any questions, feel free to reach out to us!</p>
+
+        <div class="social-media-icons">
+            <a href="" class="fa fa-facebook"></a>
+            <a href="" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-google"></a>
+            <a href="" class="fa fa-youtube"></a>
+            <a href="" class="fa fa-instagram"></a>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Patient Medical System</p>
+    </footer>
+
+
+    <script type="text/javascript">
+        
+
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.slider');
+        const indicators = document.querySelectorAll('.indicators span');
+        const totalItems = items.length;
+
+        function moveToNextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }
+
+        function moveToPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            // Move the carousel
+            document.querySelector('.inside').style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                if (i === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        // Event listeners for the arrow buttons
+        document.getElementById('next').addEventListener('click', moveToNextSlide);
+        document.getElementById('prev').addEventListener('click', moveToPrevSlide);
+
+        // Set an interval to automatically slide every 5 seconds
+        setInterval(moveToNextSlide, 5000);
+    </script>
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
